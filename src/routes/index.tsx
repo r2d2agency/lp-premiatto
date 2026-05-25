@@ -320,11 +320,7 @@ function Index() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-2 lg:grid-cols-6 gap-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Logo className="w-9 h-9 text-white" />
-              <div className="leading-tight">
-                <div className="font-serif text-lg text-white">Garantidora</div>
-                <div className="font-serif text-lg text-white -mt-1">Premiatto</div>
-              </div>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-10 w-auto brightness-0 invert" />
             </div>
             <p className="text-white/60 text-xs leading-relaxed max-w-xs">
               Estrutura, segurança e experiência para operações que exigem confiança e resultados sustentáveis.
