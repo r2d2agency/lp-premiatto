@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "preview": "wrangler pages dev dist/client --port 3000 --ip 0.0.0.0 --bundle",
+    "preview": "vite preview --host 0.0.0.0 --port 3000",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
