@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import { defineConfig as defineTanstackConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Combine the Lovable/TanStack config with standard Vite preview settings
+// Configurações do projeto
 const config = defineTanstackConfig({
   tanstackStart: {
     server: { entry: "server" },
