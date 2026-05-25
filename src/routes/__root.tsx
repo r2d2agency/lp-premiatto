@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Garantidora Premiatto — Garantias e Soluções Financeiras" },
+      { name: "description", content: "Estrutura, capital e segurança para operações que exigem critério e continuidade. Garantias estruturadas e soluções financeiras para empresas." },
+      { name: "author", content: "Garantidora Premiatto" },
+      { property: "og:title", content: "Garantidora Premiatto" },
+      { property: "og:description", content: "Garantias estruturadas e soluções financeiras para empresas." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
