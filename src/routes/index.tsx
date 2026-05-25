@@ -117,10 +117,7 @@ function Index() {
           />
           <div className="relative">
             <div className="flex items-center gap-2 mb-6">
-              <Logo className="w-7 h-7 text-[#0a1a3a]" />
-              <span className="font-serif text-xl text-[#0a1a3a]">
-                Garantidora <span className="block -mt-1">Premiatto</span>
-              </span>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-9 w-auto" />
             </div>
             <h3 className="font-serif text-2xl text-[#0a1a3a] leading-snug max-w-sm">
               Garantias estruturadas para proteger o que sustenta o seu negócio.
