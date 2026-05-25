@@ -27,6 +27,7 @@ import capitalImg from "@/assets/capital.jpg";
 import governancaImg from "@/assets/governanca.jpg";
 import parceirosImg from "@/assets/parceiros.jpg";
 import premiattoCtaImg from "@/assets/premiatto-cta.jpg";
+import logoGarantidora from "@/assets/logo-garantidora.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -65,11 +66,7 @@ function Index() {
           {/* Nav */}
           <nav className="max-w-[1280px] mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Logo className="w-9 h-9 text-white" />
-              <div className="leading-tight">
-                <div className="font-serif text-lg">Garantidora</div>
-                <div className="font-serif text-lg -mt-1">Premiatto</div>
-              </div>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-10 w-auto brightness-0 invert" />
             </div>
             <ul className="hidden lg:flex items-center gap-7 text-sm">
               <li className="hover:text-white/80 cursor-pointer">Institucional</li>
@@ -120,10 +117,7 @@ function Index() {
           />
           <div className="relative">
             <div className="flex items-center gap-2 mb-6">
-              <Logo className="w-7 h-7 text-[#0a1a3a]" />
-              <span className="font-serif text-xl text-[#0a1a3a]">
-                Garantidora <span className="block -mt-1">Premiatto</span>
-              </span>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-9 w-auto" />
             </div>
             <h3 className="font-serif text-2xl text-[#0a1a3a] leading-snug max-w-sm">
               Garantias estruturadas para proteger o que sustenta o seu negócio.
@@ -326,11 +320,7 @@ function Index() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-2 lg:grid-cols-6 gap-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Logo className="w-9 h-9 text-white" />
-              <div className="leading-tight">
-                <div className="font-serif text-lg text-white">Garantidora</div>
-                <div className="font-serif text-lg text-white -mt-1">Premiatto</div>
-              </div>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-10 w-auto brightness-0 invert" />
             </div>
             <p className="text-white/60 text-xs leading-relaxed max-w-xs">
               Estrutura, segurança e experiência para operações que exigem confiança e resultados sustentáveis.
