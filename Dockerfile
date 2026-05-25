@@ -10,6 +10,15 @@ RUN bun install
 COPY . .
 # Run the build
 RUN bun run build
+# Prepare the worker script and assets for wrangler
+RUN mkdir -p dist/client && \
+    if [ -d dist/server ]; then \
+      cp -r dist/server/* dist/client/ && \
+      if [ -f dist/client/index.js ]; then \
+        mv dist/client/index.js dist/client/_worker.js; \
+      fi; \
+    fi
+
 
 # Production stage
 FROM base AS production
