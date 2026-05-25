@@ -66,11 +66,7 @@ function Index() {
           {/* Nav */}
           <nav className="max-w-[1280px] mx-auto px-6 lg:px-10 py-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Logo className="w-9 h-9 text-white" />
-              <div className="leading-tight">
-                <div className="font-serif text-lg">Garantidora</div>
-                <div className="font-serif text-lg -mt-1">Premiatto</div>
-              </div>
+              <img src={logoGarantidora} alt="Garantidora Premiatto" className="h-10 w-auto brightness-0 invert" />
             </div>
             <ul className="hidden lg:flex items-center gap-7 text-sm">
               <li className="hover:text-white/80 cursor-pointer">Institucional</li>
