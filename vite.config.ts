@@ -1,23 +1,29 @@
-import { defineConfig } from "vite";
+import { defineConfig, mergeConfig } from "vite";
 import { defineConfig as defineTanstackConfig } from "@lovable.dev/vite-tanstack-config";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configurações do projeto
-const config = defineTanstackConfig({
+const baseConfig = defineTanstackConfig({
   tanstackStart: {
     server: { entry: "src/server.ts" },
   },
 });
 
-export default {
-  ...config,
-  build: {
-    rollupOptions: {
-      input: {
-        main: "index.html",
+export default defineConfig(async (env) => {
+  const base = typeof baseConfig === "function" ? await baseConfig(env) : baseConfig;
+  
+  return mergeConfig(base, {
+    resolve: {
+      alias: {
+        "node:async_hooks": path.resolve(__dirname, "src/lib/async-hooks-mock.ts"),
       },
     },
-  },
-  preview: {
-    allowedHosts: ["whats-agente-premiatto.isyhhh.easypanel.host"],
-  },
-};
+    preview: {
+      allowedHosts: ["whats-agente-premiatto.isyhhh.easypanel.host"],
+    },
+  });
+});
