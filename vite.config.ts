@@ -10,13 +10,6 @@ const config = defineTanstackConfig({
 
 export default {
   ...config,
-  build: {
-    rollupOptions: {
-      input: {
-        main: "index.html",
-      },
-    },
-  },
   preview: {
     allowedHosts: ["whats-agente-premiatto.isyhhh.easypanel.host"],
   },
