@@ -27,6 +27,7 @@ import capitalImg from "@/assets/capital.jpg";
 import governancaImg from "@/assets/governanca.jpg";
 import parceirosImg from "@/assets/parceiros.jpg";
 import premiattoCtaImg from "@/assets/premiatto-cta.jpg";
+import logoGarantidora from "@/assets/logo-garantidora.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
