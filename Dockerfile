@@ -10,8 +10,9 @@ RUN bun install
 COPY . .
 # Run the build
 RUN bun run build
-# Prepare the worker script for wrangler (if SSR is needed)
-RUN if [ -f dist/server/index.js ]; then cp dist/server/index.js dist/client/_worker.js; fi
+# Prepare the worker script and assets for wrangler
+# We copy server assets into the client directory so wrangler can bundle them
+RUN if [ -d dist/server ]; then cp -r dist/server/* dist/client/ && mv dist/client/index.js dist/client/_worker.js; fi
 
 # Production stage
 FROM base AS production
