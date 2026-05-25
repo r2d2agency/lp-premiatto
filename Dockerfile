@@ -11,14 +11,21 @@ COPY . .
 # Run the build
 RUN bun run build
 # Prepare the worker script and assets for wrangler
-# We copy server assets into the client directory so wrangler can bundle them
-RUN if [ -d dist/server ]; then cp -r dist/server/* dist/client/ && mv dist/client/index.js dist/client/_worker.js; fi
+RUN mkdir -p dist/client && \
+    if [ -d dist/server ]; then \
+      cp -r dist/server/* dist/client/ && \
+      if [ -f dist/client/index.js ]; then \
+        mv dist/client/index.js dist/client/_worker.js; \
+      fi; \
+    fi
+
 
 # Production stage
 FROM base AS production
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/wrangler.jsonc ./wrangler.jsonc
 COPY --from=build /app/node_modules ./node_modules
 
 # Port configuration
