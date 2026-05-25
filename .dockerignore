@@ -1,0 +1,15 @@
+node_modules
+dist
+.lovable
+.tanstack
+.workspace
+.git
+.gitignore
+.prettierignore
+.prettierrc
+bun.lock
+bunfig.toml
+components.json
+eslint.config.js
+tsconfig.tsbuildinfo
+wrangler.jsonc
