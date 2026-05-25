@@ -4,7 +4,7 @@ import { defineConfig as defineTanstackConfig } from "@lovable.dev/vite-tanstack
 // Configurações do projeto
 const config = defineTanstackConfig({
   tanstackStart: {
-    server: { entry: "server" },
+    server: { entry: "src/server.ts" },
   },
 });
 
